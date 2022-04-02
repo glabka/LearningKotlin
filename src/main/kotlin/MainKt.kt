@@ -1,9 +1,15 @@
+import extention_functions.ExtentionFunctionExample
+import extention_functions.ExtentionFunctionExample2
+
 // top level function (not in class) -> translates to static function
 fun main(args: Array<String>) {
     dataObjects()
     Parameters().runExample()
     expressions(true, "hi")
     funWithLocalFun()
+    callVarargFun()
+    ExtentionFunctionExample().run()
+    ExtentionFunctionExample2().run()
 }
 
 fun funWithLocalFun() {
@@ -71,8 +77,22 @@ enum class MyEnum {
         }
         // else has to be present in this case
         val myConstant2 = when (val myVar: String = "string") {
-            is String -> true
+            is String -> true // equivalent to java's instance of
             else -> false
         }
+    }
+}
+
+fun callVarargFun() {
+    // calling with listed parameters
+    varargFun(1, 2, 3)
+    // calling with spread operator *
+    val arrayOfInt = intArrayOf(1, 2, 3)
+    varargFun(*arrayOfInt)
+}
+
+fun varargFun(vararg myArg: Int) {
+    for (element in myArg) {
+        println(element)
     }
 }
