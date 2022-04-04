@@ -10,6 +10,18 @@ fun main(args: Array<String>) {
     callVarargFun()
     ExtentionFunctionExample().run()
     ExtentionFunctionExample2().run()
+    safeCastFun();
+    LambdasExample().run()
+}
+
+fun safeCastFun() {
+    val s = ""
+    println(s as? Int) // returns null if s is not of type Int
+    try {
+        println(s as Int)
+    } catch (e : Exception) {
+        println("An exception was thrown since it is not a smart cast")
+    }
 }
 
 fun funWithLocalFun() {
