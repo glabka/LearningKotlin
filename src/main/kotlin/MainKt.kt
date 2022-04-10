@@ -1,5 +1,7 @@
 import extention_functions.ExtentionFunctionExample
 import extention_functions.ExtentionFunctionExample2
+import functional_programming.LambdasExample
+import functional_programming.reference.ReferenceExample
 
 // top level function (not in class) -> translates to static function
 fun main(args: Array<String>) {
@@ -12,6 +14,7 @@ fun main(args: Array<String>) {
     ExtentionFunctionExample2().run()
     safeCastFun();
     LambdasExample().run()
+    ReferenceExample.run() // is object -> doesn't have to create an instance by the brackets ()
 }
 
 fun safeCastFun() {

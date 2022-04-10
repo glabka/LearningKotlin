@@ -1,3 +1,5 @@
+package functional_programming
+
 class LambdasExample {
 
     constructor() {
@@ -8,7 +10,7 @@ class LambdasExample {
         val list = listOf(1, 2, 3, 4, 5)
         differentNotations(list)
         multiLineLambda(list)
-        deconstructionOfDeclaration(mapOf(1 to "one", 2 to "two"))
+        deconstructionOfDeclaration(mapOf(1 to "one", 2 to "tw"))
     }
 
     fun differentNotations(list: List<Int>) {
